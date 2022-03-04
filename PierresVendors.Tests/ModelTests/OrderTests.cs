@@ -60,5 +60,15 @@ namespace PierresVendors.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newOrderList, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsCorrectId_Int()
+    {
+      string order = "Tuesday: 15 croissants, 10 muffins, 8 cookies";
+      Order newOrder = new Order(order);
+
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
