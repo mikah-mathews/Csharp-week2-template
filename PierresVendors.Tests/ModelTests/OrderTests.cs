@@ -47,5 +47,18 @@ namespace PierresVendors.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newOrder, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string tuesdayOrder = "Tuesday: 15 croissants, 10 muffins, 8 cookies";
+      string thursdayOrder = "Thursday: 10 croissants, 5 muffins, 5 cookies";
+      Order newOrder = new Order(tuesdayOrder);
+      Order secondOrder = new Order(thursdayOrder);
+      List<Order> newOrderList = new List<Order> { newOrder, secondOrder };
+
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
   }
 }
