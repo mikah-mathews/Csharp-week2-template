@@ -1,8 +1,8 @@
-# _Pierres Vendor Portal_
+# _Pierre's Vendor Portal_
 
 #### By Mikah Mathews
 
-#### _{Brief description of application}_
+#### _Pierre's Bakery is booming! Use this application to add and view different Vendors and their orders_
 
 ## Technologies Used
 * C#
@@ -11,19 +11,19 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This c# application allows users to add a vendor, add different orders for vendors, and delete vendors. This project is written to demonstrate objects within objects and the ability to write an application that can be used in the browser._
 
 ## Setup/Installation Requirements
 
-* Visit https://**********.github.com/
+* Visit https://mikah-mathews.github.com/
 
 * Clone this repository to your local machine
-* Navigate to the {Template.Tests} folder using your terminal.
+* Navigate to the PierresVendors.Tests folder using your terminal.
 * To install the project's dependencies, in the terminal type ```dotnet restore```
 * Once dependencies are installed, type ```dotnet test``` in the terminal to run the project's tests.
-* To run the application navigate to the {Template} folder using the terminal.
-* Once in the {Template} folder, type ```dotnet run``` to run the program.
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* To run the application navigate to the PierresVendors folder using the terminal.
+* Once in the PierresVendors folder, type ```dotnet run``` in the terminal to run the program and launch the application in your browser.
+
 
 ## Known Bugs
 
