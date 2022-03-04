@@ -47,5 +47,18 @@ namespace PierresVendors.TestTools
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderAmount = "10 muffins, 15 croissants, 9 cake pops";
+      Order newOrder = new Order(orderAmount);
+      List<Order> orderList = new List<Order> { newOrder };
+      Vendor testVendor = new Vendor("Pete's Coffee", "description");
+      testVendor.AddOrder(newOrder);
+
+      List<Order> result = testVendor.Orders;
+      CollectionAssert.AreEqual(newOrder, result);
+    }
   }
 }
