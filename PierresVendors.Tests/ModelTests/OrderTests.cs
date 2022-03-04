@@ -24,6 +24,23 @@ namespace PierresVendors.Tests
       Assert.AreEqual(details, result);
     }
 
-    
+    [TestMethod]
+    public void SetDetails_SetDetail_String()
+    {
+      string detail = "Tuesday: 15 croissants, 10 muffins, 8 cookies";
+      Order newOrder = new Order(detail);
+      string updatedDetail = "Tuesday: 15 croissants, 10 muffins, 20 cookies"; 
+      newOrder.Details = updatedDetail;
+      string result = newOrder.Details;
+      Assert.AreEqual(updatedDetail, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newOrder = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newOrder, result);
+    }
   }
 }
