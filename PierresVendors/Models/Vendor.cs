@@ -27,5 +27,10 @@ namespace PierresVendors.Models
     {
       return _instances;
     }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
