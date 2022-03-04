@@ -14,5 +14,16 @@ namespace PierresVendors.Tests
       Order newOrder = new Order("Tuesday: 15 croissants, 10 muffins, 8 cookies");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetOrderDetails_ReturnDetails_String()
+    {
+      string details = "Tuesday: 15 croissants, 10 muffins, 8 cookies";
+      Order newOrder = new Order(details);
+      string result = newOrder.Details;
+      Assert.AreEqual(details, result);
+    }
+
+    
   }
 }

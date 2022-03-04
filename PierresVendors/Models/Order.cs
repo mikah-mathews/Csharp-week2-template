@@ -4,13 +4,13 @@ namespace PierresVendors.Models
 {
   public class Order
   {
-    public string Description { get; set; }
+    public string Details { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order (string description)
+    public Order (string details)
     {
-      Description = description;
+      Details = details;
       _instances.Add(this);
       Id = _instances.Count;
     }
