@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Pierres Vendor Portal_
 
 #### By Mikah Mathews
 
