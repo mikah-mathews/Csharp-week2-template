@@ -70,5 +70,17 @@ namespace PierresVendors.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string tuesdayOrder = "Tuesday: 15 croissants, 10 muffins, 8 cookies";
+      string thursdayOrder = "Thursday: 10 croissants, 5 muffins, 5 cookies";
+      Order newOrder1 = new Order(tuesdayOrder);
+      Order newOrder2 = new Order(thursdayOrder);
+
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
