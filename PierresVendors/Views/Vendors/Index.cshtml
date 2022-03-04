@@ -2,14 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>template</title>
+    <title>Pierre's Vendor Portal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
   </head>
   <body>
-    <h1>Welcome Back Pierre!</h1>
-    <br>
-    <h3><a href="/vendors">View Vendors</a></h3>
-    <h3><a href="/vendors/new">Add a New Vendor</a></h3>
+    @using PierresVendors.Models;
+    <h1>Current Vendors</h1>
+
+    @if (@Model.Count == 0)
+    {
+      <h3>No vendors have been added yet!</h3>
+    }
+
+    @foreach (Vendor vendor in Model)
+    {
+      <h3><a href='/vendor/@vendor.Id'>@vendor.Name</a></h3>
+    }
+
+    <p><a href='/'>Back Home</a></p>
   </body>
 </html>
