@@ -6,8 +6,12 @@ using System;
 namespace PierresVendors.TestTools
 {
   [TestClass]
-  public class VendorTests 
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -29,7 +33,7 @@ namespace PierresVendors.TestTools
     {
       Vendor testVendor = new Vendor("test vendor", "test description");
       int result = testVendor.Id;
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
   }
 }
