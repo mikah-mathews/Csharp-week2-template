@@ -23,7 +23,7 @@ namespace PierresVendors.Controllers
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDescription)
     {
-      Vendor newVendor = new Vendor(vendorName, vendorDescription)
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
 
@@ -45,7 +45,7 @@ namespace PierresVendors.Controllers
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(orderDescription);
       foundVendor.AddOrder(newOrder);
-      List<Order> vendorOrders = fountVendor.Orders;
+      List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
