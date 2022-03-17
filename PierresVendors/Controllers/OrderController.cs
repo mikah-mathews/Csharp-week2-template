@@ -14,9 +14,9 @@ namespace PierresVendors.Controllers
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(string details)
+    public ActionResult Create(string orderDetails)
     {
-      Order vendorOrder = new Order(details);
+      Order vendorOrder = new Order(orderDetails);
       return RedirectToAction("Index");
     }
   }

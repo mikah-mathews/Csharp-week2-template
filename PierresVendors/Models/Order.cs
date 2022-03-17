@@ -8,9 +8,9 @@ namespace PierresVendors.Models
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order (string details)
+    public Order (string orderDetails)
     {
-      Details = details;
+      Details = orderDetails;
       _instances.Add(this);
       Id = _instances.Count;
     }
